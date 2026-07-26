@@ -1,0 +1,43 @@
+[
+  {
+    "id": "verein",
+    "titel": "Verein",
+    "kurztext": "Werte, Gemeinschaft und Engagement.",
+    "link": "verein.html",
+    "aktiv": true,
+    "reihenfolge": 1
+  },
+  {
+    "id": "jugend",
+    "titel": "Jugend",
+    "kurztext": "Freude, Teamgeist und Verantwortung.",
+    "link": "jugend.html",
+    "aktiv": true,
+    "reihenfolge": 2
+  },
+  {
+    "id": "veranstaltungen",
+    "titel": "Veranstaltungen",
+    "kurztext": "Sportliche und gemeinsame Erlebnisse.",
+    "link": "veranstaltungen.html",
+    "aktiv": true,
+    "reihenfolge": 3
+  },
+  {
+    "id": "aktuelles",
+    "titel": "Aktuelles",
+    "kurztext": "Berichte, Hinweise und Rückblicke.",
+    "link": "aktuelles.html",
+    "aktiv": true,
+    "reihenfolge": 4
+  },
+  {
+    "id": "partneranlage",
+    "titel": "Partneranlage",
+    "kurztext": "Anlage, Einsteller und Schulbetrieb.",
+    "link": "https://home-5020967539.app-ionos.space/",
+    "aktiv": true,
+    "reihenfolge": 5
+  }
+]
+
