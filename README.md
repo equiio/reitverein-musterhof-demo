@@ -10,6 +10,8 @@ Das Projekt ist bewusst statisch und benötigt keine Laufzeitabhängigkeiten:
 - `style.css` für das gemeinsame responsive Design
 - `script.js` für mobile Navigation, dezente Scroll-Reveals und lokale Demofunktionen
 - `news.js` und `content/beitraege.json` für die datenbasierte Aktuelles-Ansicht
+- `content/navigation.json` für die automatisch erzeugten Startseiten-Kacheln
+- `content/kachel-vorlage.json` als verständliche Vorlage für Erweiterungen
 - lokale, optimierte WebP-Bilder unter `assets/`
 
 ## Lokal starten
@@ -30,6 +32,7 @@ Es gibt keinen Build-Schritt. Die Quelldateien sind bereits das veröffentlichun
 - optionaler Prüf-/Startbefehl: `python -m http.server 8080`
 - Veröffentlichungsverzeichnis bei IONOS Deploy Now: Repository-Root (`.`)
 - Framework-Einstellung: `Other` / `Static HTML`
+- maßgebliche IONOS-Testadresse: https://home-5020974089.app-ionos.space/
 
 ## Inhaltsstruktur
 
@@ -57,8 +60,20 @@ Alle verwendeten Bilddateien liegen lokal vor. Neue Bilder sollten vor dem Einsp
 
 Die Beiträge werden automatisch nach Datum sortiert. Der neueste Beitrag ist auf der Aktuelles-Seite geöffnet; über `aktuelles.html#slug` kann direkt auf einen Beitrag verwiesen werden.
 
+## Neue Kachel und Unterseite ergänzen
+
+1. Eine neue HTML-Unterseite im bestehenden Vereinsdesign anlegen.
+2. `content/kachel-vorlage.json` als Ausgangspunkt verwenden und den Eintrag in `content/navigation.json` ergänzen.
+3. `id`, kurzen `titel` (höchstens drei Wörter), `kurztext`, `link` und eine eindeutige `reihenfolge` pflegen.
+4. `symbol` ist optional. Ein fehlendes Symbol wird ohne Fehler ausgelassen.
+5. Nur Einträge mit `"aktiv": true` erscheinen. Die Sortierung erfolgt automatisch über `reihenfolge`.
+6. Unterseite, interne Links und Kachelraster bei 320, 375, 390, 430, 768, 1024 und 1440 Pixel Breite prüfen.
+
+Statische Fallback-Kacheln halten die Navigation auch bei einem Ladefehler erreichbar. Mit JavaScript werden sie durch die aktuelle, sortierte Konfiguration ersetzt.
+
 ## Anonyme Demoversion
 
 Die Website enthält ausschließlich fiktive Namen, Inhalte, Termine, Personen, Orte und rechtliche Platzhalter. Sie hat keinen Bezug zu einem realen Verein, Reitstall oder einer realen Organisation. Vor einer echten Veröffentlichung müssen insbesondere Impressum, Datenschutz, Vereinsinformationen, Mitgliedschaftsbedingungen und sämtliche Inhalte rechtlich und redaktionell geprüft werden.
 
 Es werden keine Trackingdienste, externen Einbettungen, Formulare oder zustimmungspflichtigen Cookies verwendet.
+

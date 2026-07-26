@@ -1,0 +1,10 @@
+{
+  "id": "pferdesport",
+  "titel": "Pferdesport",
+  "kurztext": "Gemeinsam trainieren und fair handeln.",
+  "link": "pferdesport.html",
+  "symbol": "assets/icons/pferdesport.svg",
+  "aktiv": true,
+  "reihenfolge": 6
+}
+
